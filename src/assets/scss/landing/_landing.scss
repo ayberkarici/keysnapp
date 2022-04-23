@@ -1,0 +1,197 @@
+.landing {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 64px;
+
+    &_image {
+        width: 30%;
+        height: fit-content;
+        svg,
+        img {
+            width: 100%;
+            height: auto;
+            user-select: none;
+        }
+    }
+
+    &_starting_part {
+        color: $mainBgColor;
+        margin-right: 10%;
+        width: 50%;
+
+        height: 50%;
+    }
+
+    &_text {
+        font-size: 1.5rem;
+        h1 {
+            font-weight: 800;
+            position: relative;
+
+            &::after {
+                content: "";
+                height: 100%;
+                width: 6px;
+                border-radius: 999px;
+                position: absolute;
+                left: -16px;
+                top: 4px;
+                background-color: rgb(0, 0, 0);
+            }
+        }
+
+        p {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: lighten($darkTextColor, 25%);
+        }
+    }
+
+    .landing_buttons {
+        display: flex;
+        flex-direction: row;
+        margin-top: 2rem;
+    
+        a {
+            user-select: none;
+            cursor: pointer;
+            color: white !important;
+            font-size: 1.4rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: auto;
+            height: auto;
+            padding: 0.9rem 2rem;
+    
+            text-decoration: none;
+            color: black;
+            border-radius: 999px;
+            transition: 0.2s ease-in-out box-shadow,
+                0.2s ease-in-out background-color, 0.2s ease-in-out color;
+        }
+    
+        .sign-up-button {
+            background-color: $mainBgColor;
+            margin-right: 1.5rem;
+            border: 4px solid transparent;
+    
+            &:hover {
+                border: 4px solid darken($mainBgColor, 5%);
+                box-shadow: $shadow-md;
+            }
+        }
+    
+        .how-it-works {
+            color: $darkTextColor !important;
+            background-color: white;
+            border: 4px solid $mainBgColor;
+    
+            &:hover {
+                border: 4px solid darken($mainBgColor, 5%);
+                background-color: $mainBgColor;
+                box-shadow: $shadow-md;
+                color: white !important;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .landing {
+        flex-direction: column;
+        &_starting_part {
+            width: 80%;
+            height: fit-content;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        &_text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            h1 {
+                font-size: 2rem;
+                text-align: center;
+                width: 80%;
+                &::after {
+                    display: none;
+                }
+            }
+
+            p {
+                font-size: 1.1rem;
+                font-weight: 500;
+                color: lighten($darkTextColor, 25%);
+            }
+        }
+
+
+    &_image {
+        width: 50%;
+        margin-top: 3rem;
+    }
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .landing {
+        padding: 16px;
+        &_starting_part {
+            width: 90%;
+            margin-right: 0%;
+        }
+        &_text {
+            h1 {
+                font-size: 1.8rem;
+                width: 100%;
+                &::after {
+                    display: none;
+                }
+            }
+
+            p {
+                font-size: 1rem;
+                font-weight: 500;
+                color: lighten($darkTextColor, 25%);
+            }
+        }
+        
+        &_buttons {
+            a {
+                font-size: .9rem !important;
+                padding: 8px 16px !important;
+                font-weight: 600 !important;
+            }
+            .sign-up-button {
+                margin-right: 1rem !important;
+            }
+        }
+    }
+}
+
+
+//
+@media only screen and (max-width: 992px) {
+    .landing {
+        &_buttons {
+            a {
+                font-size: 1rem;
+                padding: 12px 20px;
+            }
+            .sign-up-button {
+                margin-right: 1rem;
+            }
+        }
+
+    }
+}

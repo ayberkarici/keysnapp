@@ -1,0 +1,20 @@
+@import "normalize";
+@import "variables";
+@import "generals";
+
+// Header
+@import "layout/header";
+
+
+// Landing Page Style Sheet
+@import "landing/landing";
+@import "landing/how-it-works";
+@import "landing/pricing";
+
+// Login Page Style sheet
+@import "login/login";
+
+
+// Footer
+@import "layout/footer";
+

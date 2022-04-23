@@ -1,0 +1,192 @@
+.login {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    position: relative;
+
+    section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        height: 100vh;
+    }
+
+    &-field {
+        .login-form {
+            width: 400px;
+            height: fit-content;
+        }
+        .input {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-direction: column;
+            margin: 1.2rem 0rem 0.6rem;
+
+            label {
+                display: inline-block;
+                font-size: 1.4rem;
+                color: $black;
+                font-weight: 600;
+                margin-bottom: 0.4rem;
+            }
+            input {
+                width: 100%;
+                line-height: 1.6rem;
+                background-color: transparent;
+                border: 2px solid $softYellow;
+                border-radius: 8px;
+                padding: 4px 8px;
+                color: $darkTextColor;
+
+                &::placeholder {
+                    font-weight: 400;
+                }
+
+                &:focus {
+                    outline: none;
+                    font-weight: 800;
+                    border: 2px solid $mainBgColor;
+                }
+            }
+        }
+    }
+
+    &-image {
+        background-color: $mainBgColor;
+        img {
+            width: 40%;
+        }
+    }
+
+    &-button {
+        user-select: none;
+        background-color: $mainBgColor;
+        border-radius: 8px;
+        padding: 8px 16px;
+        color: $white;
+        font-weight: 600;
+        border: 4px solid transparent;
+        cursor: pointer;
+
+        &:hover {
+            border: 4px solid lighten($mainBgColor, 10);
+            transform: scale(1.1);
+        }
+    }
+
+    &-operations {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 2rem;
+
+        button {
+            display: block;
+        }
+
+        a {
+            display: block;
+            color: $mainBgColor;
+            text-decoration: none;
+            font-weight: 500;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+}
+.brand-position {
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span {
+        display: block;
+
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: .2rem;
+    }
+    
+    a {
+        text-decoration: none;
+        color: $black;
+        margin-bottom: 1rem;
+        border-bottom: 4px solid $mainBgColor;
+    }
+
+    img {
+        width: 120px;
+    }
+}
+
+.inputAlert {
+    p {
+        margin: 0.4rem 0rem;
+        color: $alertRed;
+        font-style: italic;
+    }
+    input {
+        border: 2px solid $alertRed !important;
+    }
+}
+
+
+
+@media only screen and (max-width: 992px) {
+    .login {
+        flex-direction: column;
+        width: 100%;
+
+        &-field {
+            position: relative;
+            transform: translateY(50%);
+            transform-origin: center;
+            width: 92.5% !important;
+
+            form {
+                width: 100%;
+            }
+
+            .login-form {
+                border-radius: 16px;
+                background-color: $white;
+                padding: .8rem;
+                width: 100% !important;
+                border: .4rem solid $mainBgColor;
+            }
+        }
+
+        &-button {
+            font-weight: 500;
+            font-size: 1rem;
+            padding: 8px 12px;
+        } 
+
+        &-operations {
+            font-size: .8rem;
+        }
+
+        &-image {
+            width: 100% !important;
+
+            img {
+                display: none;
+            }
+        }
+    }
+
+    .brand-position {
+        transform: scale(.9);
+    }
+}
