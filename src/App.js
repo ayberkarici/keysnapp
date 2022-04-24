@@ -14,14 +14,15 @@ import Register from "./pages/RegisterPage";
 import ForgotPasswordPage from "./pages/ForgotPasswordPage";
 import ForgotPassEmailPage from "./pages/ForgotPassEmailPage";
 import NewPassPage from "./pages/NewPassPage";
+import MathEnginePage from "./pages/MathEnginePage";
 
 function App() {
     const notAllowedPaths = [
         "/login",
         "/register",
         "/recovery",
-        "/newPassword",
-        "/email-support"
+        "/email-support",
+        "/new-password"
     ];
 
     return (
@@ -37,7 +38,8 @@ function App() {
                     <Route path="/register" element={<Register />} />
                     <Route path="/recovery" element={<ForgotPasswordPage />} />
                     <Route path="/email-support" element={<ForgotPassEmailPage />} />
-                    <Route path="/newPassword" element={<NewPassPage />} />
+                    <Route path="/new-password" element={<NewPassPage />} />
+                    <Route path="/math-engine" element={<MathEnginePage />} />
                 </Routes>
                 <Footer
                     pathName={window.location.pathname}
