@@ -1,15 +1,27 @@
 import React, { useState } from "react";
+import { useLocation } from "react-router";
 import Logo from "../assets/img/logo.png";
 import HamburgerMenu from "./HamburgerMenu";
 
-const Header = () => {
+const Header = (props) => {
     const [hamburgerMenu, setHamburgerMenu] = useState(false);
+    const pathList = props.pathList; 
+    const [checkPath, setCheckPath] = useState(false);
+    const location = useLocation(); 
 
     const menuHandler = () => {!hamburgerMenu ? document.body.style.overflow = "hidden" : document.body.style.overflow = "auto"}
     
+    React.useEffect(() => {
+        for (let i = 0; i < pathList.length; i++) {
+            if (window.location.pathname == pathList[i]) {
+                console.log('içerdeyim');
+                setCheckPath(true);
+            }
+        }
+    }, [location]);
 
     return (
-        <header className="header">
+        <header className="header" style={(checkPath ? {"display" : "none"} : {})}>
             <div className="brand-name">
                 <a href="/">
                     <img src={Logo} />

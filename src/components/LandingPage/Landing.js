@@ -8,7 +8,7 @@ const Landing = () => {
             <div className="landing_starting_part">
                 <div className="landing_text">
                     <h1>
-                        Ev ödevi <br /> yeniden tasarlandı...
+                        Ev ödevi <br /> yeniden tasarlandı.
                     </h1>
                     <p>
                         Sen de bitmek bilmeyen ödevlerden, anlamadığın sorularla

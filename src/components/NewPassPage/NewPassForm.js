@@ -8,20 +8,20 @@ const LoginForm = () => {
                 <form>
                     <div className="login-form">
                         <div className="input">
-                            <label htmlFor="mail" >E-mail</label>
+                            <label htmlFor="password">Yeni Şifrem</label>
                             <input
-                                id="mail"
-                                type="email"
-                                placeholder="E-mail"
+                                id="newPassword"
+                                type="password"
+                                placeholder="*********"
                             />
-                            {/*<p className="info inputAlert">Lütfen emailini gir.</p> */}
+                            {/*<p className="info">Lütfen şifreni gir.</p>*/}
                         </div>
                         <div className="input">
-                            <label htmlFor="password">Şifre</label>
+                            <label htmlFor="password">Bir kere daha Şifrem</label>
                             <input
-                                id="password"
+                                id="newPassword2"
                                 type="password"
-                                placeholder="******************"
+                                placeholder="*********"
                             />
                             {/*<p className="info">Lütfen şifreni gir.</p>*/}
                         </div>
@@ -29,7 +29,7 @@ const LoginForm = () => {
                             <button className="login-button" type="button">
                                 Giriş yap
                             </button>
-                            <a href="/email-support">Şifremi unuttum</a>
+                            <a href="/login">Şifremi hatırladım</a>
                         </div>
                     </div>
                 </form>

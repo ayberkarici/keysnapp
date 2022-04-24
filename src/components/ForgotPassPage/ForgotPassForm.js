@@ -8,28 +8,19 @@ const LoginForm = () => {
                 <form>
                     <div className="login-form">
                         <div className="input">
-                            <label htmlFor="mail" >E-mail</label>
+                            <label htmlFor="password">Kurtarma kodum</label>
                             <input
-                                id="mail"
-                                type="email"
-                                placeholder="E-mail"
-                            />
-                            {/*<p className="info inputAlert">Lütfen emailini gir.</p> */}
-                        </div>
-                        <div className="input">
-                            <label htmlFor="password">Şifre</label>
-                            <input
-                                id="password"
-                                type="password"
-                                placeholder="******************"
+                                id="email-recovery"
+                                type="text"
+                                placeholder="Örn: 121212"
                             />
                             {/*<p className="info">Lütfen şifreni gir.</p>*/}
                         </div>
                         <div className="login-operations">
                             <button className="login-button" type="button">
-                                Giriş yap
+                                Yeni şifrem
                             </button>
-                            <a href="/email-support">Şifremi unuttum</a>
+                            <a href="/login">Şifremi hatırladım</a>
                         </div>
                     </div>
                 </form>
