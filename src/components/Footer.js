@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useLocation } from "react-router";
+import { useLocation } from "react-router-dom";
 import brandPhoto from "../assets/img/logo_light.png";
 
 const Footer = (props) => {

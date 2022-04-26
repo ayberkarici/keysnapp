@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useLocation } from "react-router";
+import { useLocation } from "react-router-dom";
 import Logo from "../assets/img/logo.png";
 import HamburgerMenu from "./HamburgerMenu";
 
@@ -29,13 +29,13 @@ const Header = (props) => {
             </div>
             <div className="menu-list">
                 <a href="/" className="menu-list-item">
-                    <span href="/a">Nasıl Çalışır</span>
+                    <span >Nasıl Çalışır</span>
                 </a>
-                <a href="/" className="menu-list-item">
-                    <span href="/a">Math Engine</span>
+                <a href="/math-engine" className="menu-list-item">
+                    <span >Math Engine</span>
                 </a>
                 <a href="/login" className="menu-list-item">
-                    <span href="/login">Giriş Yap</span>
+                    <span >Giriş Yap</span>
                 </a>
                 <a href="/register" className="signup-button menu-list-item">
                     <span >Üye Ol</span>
