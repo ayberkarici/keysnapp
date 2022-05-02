@@ -10,6 +10,7 @@ body {
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
         monospace;
+        
 }
 
 * {
@@ -22,6 +23,7 @@ code {
     height: fit-content;
     padding: 120px;
     background-color: $beige;
+    position: relative;
     
     .section-header {
         font-size: 3rem;
@@ -29,6 +31,21 @@ code {
         color: black;
         margin-bottom: 6rem;
     }
+}
+
+.form-layout {
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding-bottom: 4rem;
+
+    position: relative;
+
+    a {text-decoration: none;}
+
 }
 
 .section-body {
@@ -41,17 +58,46 @@ code {
     
 }
 
+.section-title {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    font-weight: 600;
+    color: $black;
+    position: relative;
+}
+
+.section-select {
+    border: 2px solid lighten($black, 90);
+    background-color: $white;
+    padding: 8px 8px;
+    min-width: 250px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+
+    &:focus {
+        outline: none;
+        border: 2px solid $mainBgColor;
+    }
+}
+
 .highlight-green {
     background-color: lighten(#06FF00, 20);
     display: inline-block;
-    padding: 0px 8px;
+    padding: 0px 4px;
     border-radius: 4px;
-    line-height: .9rem;
+    line-height: 1rem;
+    margin: 0rem 4px;
 }
 
 @media only screen and (max-width: 650px) {
     .section-layout {
-        padding: 48px 24px;
+        padding: 48px 12px;
 
         .section-header {
             font-size: 2rem;

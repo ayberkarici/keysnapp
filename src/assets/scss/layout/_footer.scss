@@ -65,3 +65,13 @@
 
     }
 }
+
+@media only screen and (max-width: 950px) {
+    .footer {
+        .brand {
+            img {
+                width: 90%;
+            }
+        }
+    }
+}

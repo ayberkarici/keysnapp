@@ -15,6 +15,12 @@ import ForgotPasswordPage from "./pages/ForgotPasswordPage";
 import ForgotPassEmailPage from "./pages/ForgotPassEmailPage";
 import NewPassPage from "./pages/NewPassPage";
 import MathEnginePage from "./pages/MathEnginePage";
+import UnivSelectionPage from "./pages/UnivSelectionPage";
+import DepartmentSelectionPage from "./pages/DepartmentSelectionPage";
+import ActiveHomeworksPage from "./pages/ActiveHomeworksPage";
+import SectionItemsPage from "./pages/SectionItemsPage";
+import SectionDetailsPage from "./pages/SectionDetailsPage";
+import Question from "./pages/Question";
 
 function App() {
     const notAllowedPaths = [
@@ -40,6 +46,13 @@ function App() {
                     <Route path="/email-support" element={<ForgotPassEmailPage />} />
                     <Route path="/new-password" element={<NewPassPage />} />
                     <Route path="/math-engine" element={<MathEnginePage />} />
+                    <Route path="/university-selection" element={<UnivSelectionPage />} />
+                    <Route path="/department-selection" element={<DepartmentSelectionPage />} />
+                    <Route path="/active-homeworks" element={<ActiveHomeworksPage />} />
+                    <Route path="/sections/:id" element={<SectionItemsPage />} />
+                    <Route path="/section-details/:id" element={<SectionDetailsPage />} />
+                    <Route path="/question/:id" element={<Question />} />
+
                 </Routes>
                 <Footer
                     pathName={window.location.pathname}

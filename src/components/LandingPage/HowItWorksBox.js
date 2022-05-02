@@ -37,7 +37,7 @@ const Pricing = () => {
                         onMouseEnter={() => setShownPhoto("mathEngine")}
                     >
                         <span>
-                            4) Math Engine'i kullan ve <span className="highlight-green" >kendi değerlerinle</span> sonuca
+                            4) Math Engine'i kullan ve <span className="highlight-green">kendi değerlerinle</span> sonuca
                             ulaş
                         </span>
                     </div>
