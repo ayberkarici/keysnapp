@@ -11,7 +11,7 @@
     
     width: 100%;
     background-color: darken($mainBgColor, 10);
-    padding: 72px 96px; // Responsive
+    padding: 72px 76px; // Responsive
 
     .brand {
         img {
@@ -59,7 +59,7 @@
         .brand {
             margin-bottom: 1.5rem ;
             img {
-                width: 70%;
+                width: 200px !important;
             }
         }
 

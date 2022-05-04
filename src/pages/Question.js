@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import Variable from "../components/QuestionPage/Variable";
+import AnswererBox from "../components/QuestionPage/AnswererBox";
 
 const Question = () => {
+    // TODO Mathquill ekle
     const [question, setQuestion] = useState({});
     const [supportJSON, setSupportJSON] = useState({
         func: function (a, b, c) {
@@ -12,12 +15,10 @@ const Question = () => {
 
     useEffect(() => {
         const params = () => {
-            for (let i = 0; i < supportJSON.length; i++) {
-                
-            }
+            for (let i = 0; i < supportJSON.length; i++) {}
 
-            return 
-        }
+            return;
+        };
 
         console.log(supportJSON.func());
         // Make a request for a user with a given ID
@@ -38,8 +39,34 @@ const Question = () => {
 
     return (
         <div className="question-layout">
-            <h1>Question: {question.name}...</h1>
-            <div className="variables"></div>
+            <div className="variables">
+                <Variable sign={"V"} />
+                <Variable sign={"∂"} />
+                <Variable sign={"∆x"} />
+                <div className="variables-title">Değişkenlerin</div>
+                <button className="calculate-button">Soruyu çöz</button>
+            </div>
+            <div className="question-section">
+                <AnswererBox
+                    name={"Ayberk Arıcı"}
+                    questionAnswered={12}
+                    userUrl={"ayberk-arici"}
+                />
+                <div className="question">
+                    <h1 className="question-mark">Soru: {question.name}...</h1>
+                    <p>{question.body}</p>
+                    <p>{question.body}</p>
+                    <h1 className="step-mark">Adım 1</h1>
+                    <p>{question.body}</p>
+                    <p>{question.body}</p>
+                    <p>{question.body}</p>
+                    <h1 className="step-mark">Adım 2</h1>
+                    <p>{question.body}</p>
+                    <h1 className="step-mark">Adım 3</h1>
+                    <p>{question.body}</p>
+                    <p>{question.body}</p>
+                </div>
+            </div>
         </div>
     );
 };

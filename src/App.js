@@ -51,7 +51,7 @@ function App() {
                     <Route path="/active-homeworks" element={<ActiveHomeworksPage />} />
                     <Route path="/sections/:id" element={<SectionItemsPage />} />
                     <Route path="/section-details/:id" element={<SectionDetailsPage />} />
-                    <Route path="/question/:id" element={<Question />} />
+                    <Route path="/question/:id" element={<Question />} /> 
 
                 </Routes>
                 <Footer
