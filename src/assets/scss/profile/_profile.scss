@@ -1,0 +1,135 @@
+$layout-border-radius: 12px; 
+
+.user-sidebox {
+    width: 256px;
+    height: fit-content;
+    padding: 1rem;
+    border-radius: $layout-border-radius;
+    background-color: lighten($sectionColorGrey, 3);
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    box-shadow: $shadow-md;
+
+    a {
+        text-decoration: none;
+        width: 100%;
+        display: inline-block;
+        margin: .25rem 0px;
+    }
+
+    &-item {
+        width: 100%;
+        height: fit-content;
+        padding: 1rem;
+        border-radius: 8px;
+        color: $black;
+        font-weight: 800;
+        font-size: 1rem;
+        
+
+        &:hover {
+            background-color: $navbarHover;
+        }
+
+
+    }
+}
+
+.user-flow {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 2rem;
+    background-color: lighten($sectionColorGrey, 3);
+    box-shadow: $shadow-md;
+    padding: 1rem;
+    border-radius: $layout-border-radius;
+    
+
+    .profile-photo {
+        width: 148px;
+        height: 148px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 9999px;
+        overflow: hidden;
+        border: 3px solid rgba(204, 204, 204, 0.739);
+        box-shadow: $shadow-sm;
+        margin-right: 2rem;
+        background-color: $mainBgColor;
+        font-size: 1rem;
+        font-weight: 800;
+        color: white;
+
+    }
+    .user-info-box {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-bottom: 1.5rem;
+
+        
+        .user-info {
+            .user-name {
+                margin-top: 2rem;
+                font-size: 1.8rem;
+                color: $black;
+                font-weight: 800;
+            }
+    
+            .user-description {
+                font-size: 1rem;            
+                color: rgb(45, 45, 45);
+                font-weight: normal;
+            }
+    
+        }
+
+    }
+
+}
+
+.posts {
+    width: 100%;
+    .post {
+        width: 100%;
+        margin: 1rem 0% 0%;
+        border-radius: 4px;
+        background-color: lighten($sectionColorGrey, 1);
+        min-height: 160px;
+        padding: 1rem;
+        border: 1px solid transparent;
+
+        &:hover {
+            border: 1px solid rgba(202, 202, 202, 0.574);
+        }
+
+        &-header {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            .post-icon {
+                font-size: 4rem;
+            }
+
+            .post-context {
+                font-size: 1.2rem;
+                font-weight: 500;
+                color: $innertextBlackColor;
+            }
+        }
+    }
+}
+
+.profile-section {
+    display: flex;
+}

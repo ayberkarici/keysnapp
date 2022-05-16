@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Variable from "../components/QuestionPage/Variable";
 import AnswererBox from "../components/QuestionPage/AnswererBox";
+import QuestionSkeleton from "../components/QuestionSkeleton";
 
-const Question = () => {
+const QuestionPage = () => {
     // TODO Mathquill ekle
     const [question, setQuestion] = useState({});
     const [supportJSON, setSupportJSON] = useState({
@@ -47,28 +48,35 @@ const Question = () => {
                 <button className="calculate-button">Soruyu çöz</button>
             </div>
             <div className="question-section">
-                <AnswererBox
-                    name={"Ayberk Arıcı"}
-                    questionAnswered={12}
-                    userUrl={"ayberk-arici"}
-                />
-                <div className="question">
-                    <h1 className="question-mark">Soru: {question.name}...</h1>
-                    <p>{question.body}</p>
-                    <p>{question.body}</p>
-                    <h1 className="step-mark">Adım 1</h1>
-                    <p>{question.body}</p>
-                    <p>{question.body}</p>
-                    <p>{question.body}</p>
-                    <h1 className="step-mark">Adım 2</h1>
-                    <p>{question.body}</p>
-                    <h1 className="step-mark">Adım 3</h1>
-                    <p>{question.body}</p>
-                    <p>{question.body}</p>
-                </div>
+                {!question&& <QuestionSkeleton />}
+                {question && (
+                    <>
+                        <AnswererBox
+                            name={"Ayberk Arıcı"}
+                            questionAnswered={12}
+                            userUrl={"ayberk-arici"}
+                        />
+                        <div className="question">
+                            <h1 className="question-mark">
+                                Soru: {question.name}...
+                            </h1>
+                            <p>{question.body}</p>
+                            <p>{question.body}</p>
+                            <h1 className="step-mark">Adım 1</h1>
+                            <p>{question.body}</p>
+                            <p>{question.body}</p>
+                            <p>{question.body}</p>
+                            <h1 className="step-mark">Adım 2</h1>
+                            <p>{question.body}</p>
+                            <h1 className="step-mark">Adım 3</h1>
+                            <p>{question.body}</p>
+                            <p>{question.body}</p>
+                        </div>
+                    </>
+                )}
             </div>
         </div>
     );
 };
 
-export default Question;
+export default QuestionPage;

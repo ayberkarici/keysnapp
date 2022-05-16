@@ -1,11 +1,6 @@
 import "./assets/scss/App.scss";
 import React from "react";
-import {
-    BrowserRouter,
-    BrowserRouter as Router,
-    Route,
-    Routes,
-} from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -20,7 +15,8 @@ import DepartmentSelectionPage from "./pages/DepartmentSelectionPage";
 import ActiveHomeworksPage from "./pages/ActiveHomeworksPage";
 import SectionItemsPage from "./pages/SectionItemsPage";
 import SectionDetailsPage from "./pages/SectionDetailsPage";
-import Question from "./pages/Question";
+import Question from "./pages/QuestionPage";
+import Profile from "./pages/ProfilePage";
 
 function App() {
     const notAllowedPaths = [
@@ -52,6 +48,7 @@ function App() {
                     <Route path="/sections/:id" element={<SectionItemsPage />} />
                     <Route path="/section-details/:id" element={<SectionDetailsPage />} />
                     <Route path="/question/:id" element={<Question />} /> 
+                    <Route path="/user/:id" element={<Profile />} /> 
 
                 </Routes>
                 <Footer

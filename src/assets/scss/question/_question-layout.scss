@@ -1,7 +1,7 @@
 .question-layout {
     width: 100%;
     height: fit-content;
-    padding: 76px;
+    padding: 32px 76px;
     background-color: lighten($beige, 1.5);
     color: rgb(10, 10, 10);
     display: flex;
@@ -16,9 +16,10 @@
         border-radius: 3px;
         transform: translateX(-1rem);
         width: calc(100% + 2rem);
+        background-color: white;
 
         .question {
-            padding: 1rem;
+            padding: 2rem;
 
             .question-mark,
             .step-mark {
@@ -29,6 +30,7 @@
                     content: "";
                     position: absolute;
                     left: -0.5rem;
+                    top: 0px;
                     width: 4px;
                     height: 100%;
                     border-radius: 999px;
